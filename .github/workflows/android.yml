@@ -19,4 +19,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: SkyTube-Oss.apk
-        path: app/build/outputs/apk/oss/snapshot/SkyTube-Oss-*.apk
+        path: app/build/outputs/apk/oss/debug/SkyTube-Oss-*.apk
