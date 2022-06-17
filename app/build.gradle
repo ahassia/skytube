@@ -64,13 +64,6 @@ android {
                             '"AIzaSyBd3Loyy_XN2tPHPfc1E7EkSkdCqfzTHxg"' +
                             '}'
         }
-        // 99% Open-source edition:  uses the YouTube Player Jar [i.e. proprietary module - optional usage]
-        extra {
-            applicationIdSuffix ".extra"
-            resValue "string", "app_name", "SkyTube Extra"
-            resValue "string", "app_flavor", "Extra"
-            dimension "skytube"
-        }
     }
     // Generate APK filenames as follows:  <App Name>-<Flavor><Version>
     applicationVariants.all { variant ->
@@ -186,19 +179,6 @@ dependencies {
     implementation 'com.github.SkyTubeTeam:RxAndroid:3.0.1.SkyTubeTeam'
     implementation 'io.reactivex.rxjava3:rxjava:3.0.13'
 
-
-/** Debug **/
-    // debugImplementation because LeakCanary should only run in debug builds
-    // Memory leak detection
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
-
-/** Flavor **/
-    // Proprietary modules
-    // Official YouTube Android Player API
-    extraImplementation files('libs/YouTubeAndroidPlayerApi.jar')
-    extraImplementation 'com.google.android.gms:play-services-cast-framework:20.0.0'
-    extraImplementation 'com.sothree.slidinguppanel:library:3.4.0'
-    extraImplementation 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
 
 /** Testing **/
     // Required for local unit tests (JUnit 5 framework)
